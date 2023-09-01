@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import logo from "../assets/logo2.png"
 import { FaBars } from "react-icons/fa"
 import { LiaTimesSolid } from "react-icons/lia"
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -17,11 +18,11 @@ const Navbar = () => {
           <h1 className='text-4xl font-bold mr-4 sm:text-3xl flex'><img src={logo} alt='logo' className='w-10 mr-2' />Cloud</h1>
 
           <ul className='hidden md:flex gap-7 font-bold text-2xl px-40'>
-            <li>Home</li>
-            <li>About</li>
-            <li>Support</li>
-            <li>Platform</li>
-            <li>Pricing</li>
+            <Link to='/'><li>Home</li></Link>
+            <Link to='/about'><li>About</li></Link>
+            <Link to='/support'><li>Support</li></Link>
+            <Link to='/platform'><li>Platform</li></Link>
+            <Link to='/pricing'><li>Pricing</li></Link>
           </ul>
         </div>
 
@@ -35,12 +36,18 @@ const Navbar = () => {
 
         </div>
       </div>
-       <ul className={!nav ? "hidden" : "absolute bg-[#F9F9F9] w-[100%] px-8"} onClick={toggle}>
-        <li className='border-b-2 py-3 border-blck-300 w-full'>Home</li>
-        <li className='border-b-2 py-3 border-blck-300 w-full'>About</li>
-        <li className='border-b-2 py-3 border-blck-300 w-full'>Support</li>
-        <li className='border-b-2 py-3 border-blck-300 w-full'>Platform</li>
-        <li className='border-b-2 py-3 border-blck-300 w-full'>Pricing</li>
+      <ul className={!nav ? "hidden" : "absolute bg-[#F9F9F9] w-[100%] px-8"} onClick={toggle}>
+
+
+
+
+
+
+        <Link to='/'> <li className='border-b-2 py-3 border-blck-300 w-full'>Home</li></Link>
+        <Link to='/about'><li className='border-b-2 py-3 border-blck-300 w-full'>About</li></Link>
+        <Link to='/support'><li className='border-b-2 py-3 border-blck-300 w-full'>Support</li></Link>
+        <Link to='/platform'><li className='border-b-2 py-3 border-blck-300 w-full'>Platform</li></Link>
+        <Link to='/pricing'> <li className='border-b-2 py-3 border-blck-300 w-full'>Pricing</li></Link>
 
 
         <div className='flex flex-col my-8'>
@@ -51,7 +58,7 @@ const Navbar = () => {
 
       </ul>
     </div>
-  ) 
+  )
 }
 
 export default Navbar
