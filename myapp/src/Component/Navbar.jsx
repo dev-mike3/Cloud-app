@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import logo from "../assets/logo2.png"
-import { FaBars } from "react-icons/fa"
+// import { FaBars } from "react-icons/fa"
 import { LiaTimesSolid } from "react-icons/lia"
 import { Link } from 'react-router-dom'
 
